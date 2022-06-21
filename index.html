@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея з grid</title>
+    <style>
+        .container {
+            background-color: #DDDDDD;
+			padding: 4px;
+            display: grid;
+            grid-template-areas: 
+                'header header header header header header'
+                'sub-left sub-left sub-left sub-right sub-right sub-right'
+                'left-menu left-menu main-area main-area main-area right-area'
+                'footer footer footer footer footer footer';
+            grid-gap: 5px;	
+            text-align: center;	
+            font-size: 24pt;
+        }
+        .container header, hgroup, nav, main, aside, footer{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        header{
+            background-color: blue;
+            grid-area: header;
+        }
+        .sub-left{
+            grid-area: sub-left;
+            background-color: yellow;
+        }
+        .sub-right{
+            grid-area: sub-right;
+            background-color: yellow;
+        }
+        nav{
+            grid-area: left-menu;
+            background-color: pink;
+            height: 660px;
+        }
+        main{
+            grid-area: main-area;
+            background-color: purple;
+        }
+        aside{
+            grid-area: right-area;
+            background-color: green;
+        }
+        footer{
+            grid-area: footer;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Заголовок</header>
+        <hgroup class="sub-left">Підзаголовок 1</hgroup>
+        <hgroup class="sub-right">Підзаголовок 2</hgroup>
+        <nav>Додаткове меню</nav>
+        <main>Основний вміст</main>
+        <aside>Банерна реклама</aside>
+        <footer>Підвал</footer>
+    </div>
+</div>
+</body>
+</html>
